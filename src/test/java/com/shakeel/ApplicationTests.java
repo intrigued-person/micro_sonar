@@ -36,7 +36,7 @@ class ApplicationTests {
     }
 
     @Test
-    public void testApplyApplication() throws IOException {
+    protected void testApplyApplication() throws IOException {
         // Arrange
         doNothing().when(applicationRepo).applyApplication(anyString(), anyLong(), anyString(), anyString(), 
                 anyString(), anyString(), anyLong(), anyString(), anyDouble(), anyDouble(), anyString(), 
@@ -54,7 +54,7 @@ class ApplicationTests {
     }
 
     @Test
-    public void testGetAllApplication() {
+    protected void testGetAllApplication() {
         // Arrange
         List<Application> applications = new ArrayList<>();
         when(applicationRepo.getAllApplication()).thenReturn(applications);
@@ -68,7 +68,7 @@ class ApplicationTests {
     }
 
     @Test
-    public void testUpdateApplicationSuccess() {
+    protected void testUpdateApplicationSuccess() {
         // Arrange
         int applicationId = 1;
         String status = "Approved";
@@ -86,7 +86,7 @@ class ApplicationTests {
     }
 
     @Test
-    public void testUpdateApplicationFailure() {
+    protected void testUpdateApplicationFailure() {
         // Arrange
         int applicationId = 1;
         String status = "Approved";
@@ -101,7 +101,7 @@ class ApplicationTests {
     }
 
     @Test
-    public void testDeleteApplication() {
+    protected void testDeleteApplication() {
         // Arrange
         int applicationId = 1;
         doNothing().when(applicationRepo).deleteApplication(applicationId);
@@ -114,7 +114,7 @@ class ApplicationTests {
     }
 
     @Test
-    public void testFindById() {
+    protected void testFindById() {
         // Arrange
         int applicationId = 1;
         Application application = new Application();
@@ -129,7 +129,7 @@ class ApplicationTests {
     }
 
     @Test
-    public void testFindByUserId() {
+    protected void testFindByUserId() {
         // Arrange
         int userId = 1;
         Application application = new Application();

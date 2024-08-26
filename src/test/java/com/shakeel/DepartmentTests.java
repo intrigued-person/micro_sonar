@@ -31,7 +31,7 @@ class DepartmentTests {
 	    }
 
 	    @Test
-	    public void testAddDept() {
+	    protected void testAddDept() {
 	        // Arrange
 	        Departments dept = new Departments();
 	        doNothing().when(departmentRepo).addDept(dept);
@@ -44,7 +44,7 @@ class DepartmentTests {
 	    }
 
 	    @Test
-	    public void testGetAllDepertment() {
+	    protected void testGetAllDepertment() {
 	        // Arrange
 	        List<Departments> departments = new ArrayList<>();
 	        when(departmentRepo.getAllDepertment()).thenReturn(departments);
@@ -58,7 +58,7 @@ class DepartmentTests {
 	    }
 
 	    @Test
-	    public void testUpdateDept() {
+	    protected void testUpdateDept() {
 	        // Arrange
 	        Departments dept = new Departments();
 	        when(departmentRepo.updateDept(dept)).thenReturn(true);
@@ -72,7 +72,7 @@ class DepartmentTests {
 	    }
 
 	    @Test
-	    public void testDeleteDept() {
+	    protected void testDeleteDept() {
 	        // Arrange
 	        int id = 1;
 	        doNothing().when(departmentRepo).deleteDept(id);
@@ -85,7 +85,7 @@ class DepartmentTests {
 	    }
 
 	    @Test
-	    public void testGetAlldeptName() {
+	    protected void testGetAlldeptName() {
 	        // Arrange
 	        List<Departments> departments = new ArrayList<>();
 	        when(departmentRepo.getAlldeptName()).thenReturn(departments);
@@ -99,7 +99,7 @@ class DepartmentTests {
 	    }
 
 	    @Test
-	    public void testGetPgdeptName() {
+	    protected void testGetPgdeptName() {
 	        // Arrange
 	        List<Departments> departments = new ArrayList<>();
 	        when(departmentRepo.getPgDept()).thenReturn(departments);
@@ -113,7 +113,7 @@ class DepartmentTests {
 	    }
 
 	    @Test
-	    public void testGetUgdeptName() {
+	    protected void testGetUgdeptName() {
 	        // Arrange
 	        List<Departments> departments = new ArrayList<>();
 	        when(departmentRepo.getUgDept()).thenReturn(departments);
@@ -127,7 +127,7 @@ class DepartmentTests {
 	    }
 
 	    @Test
-	    public void testGetAllPgDetails() {
+	    protected void testGetAllPgDetails() {
 	        // Arrange
 	        List<Departments> departments = new ArrayList<>();
 	        when(departmentRepo.getAllPgDetails()).thenReturn(departments);
@@ -141,7 +141,7 @@ class DepartmentTests {
 	    }
 
 	    @Test
-	    public void testGetAllUgDetails() {
+	    protected void testGetAllUgDetails() {
 	        // Arrange
 	        List<Departments> departments = new ArrayList<>();
 	        when(departmentRepo.getAllUgDetails()).thenReturn(departments);

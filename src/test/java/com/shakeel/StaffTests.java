@@ -30,7 +30,7 @@ class StaffTests {
 	}
 
 	@Test
-	public void testAddStaff() {
+	protected void testAddStaff() {
 		// Arrange
 		Staff staff = new Staff();
 		doNothing().when(staffRepo).addStaff(staff);
@@ -43,7 +43,7 @@ class StaffTests {
 	}
 
 	@Test
-	public void testGetAllStaff() {
+	protected void testGetAllStaff() {
 		// Arrange
 		List<Staff> staffList = new ArrayList<>();
 		when(staffRepo.getAllStaff()).thenReturn(staffList);
@@ -57,7 +57,7 @@ class StaffTests {
 	}
 
 	@Test
-	public void testUpdateStaffSuccess() {
+	protected void testUpdateStaffSuccess() {
 		// Arrange
 		Staff staff = new Staff();
 		when(staffRepo.updateDept(staff)).thenReturn(true);
@@ -71,7 +71,7 @@ class StaffTests {
 	}
 
 	@Test
-	public void testUpdateStaffFailure() {
+	protected void testUpdateStaffFailure() {
 		// Arrange
 		Staff staff = new Staff();
 		when(staffRepo.updateDept(staff)).thenReturn(false);
@@ -85,7 +85,7 @@ class StaffTests {
 	}
 
 	@Test
-	public void testDeleteStaff() {
+	protected void testDeleteStaff() {
 		// Arrange
 		int staffId = 1;
 		doNothing().when(staffRepo).deleteStaff(staffId);
@@ -98,7 +98,7 @@ class StaffTests {
 	}
 
 	@Test
-	public void testStaffLoginSuccess() {
+	protected void testStaffLoginSuccess() {
 		// Arrange
 		String staffName = "staffName";
 		String password = "password";
@@ -114,7 +114,7 @@ class StaffTests {
 	}
 
 	@Test
-	public void testStaffLoginFailure() {
+	protected void testStaffLoginFailure() {
 		// Arrange
 		String staffName = "staffName";
 		String password = "wrongpassword";

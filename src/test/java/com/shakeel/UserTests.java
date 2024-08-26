@@ -30,7 +30,7 @@ class UserTests {
     }
 
     @Test
-    public void testAddUser() {
+    protected void testAddUser() {
         // Arrange
         UserReg user = new UserReg();
         doNothing().when(userRepo).addUser(user);
@@ -43,7 +43,7 @@ class UserTests {
     }
 
     @Test
-    public void testStudentLoginSuccess() {
+    protected void testStudentLoginSuccess() {
         // Arrange
         String email = "test@example.com";
         String password = "password";
@@ -59,7 +59,7 @@ class UserTests {
     }
 
     @Test
-    public void testStudentLoginFailure() {
+    protected void testStudentLoginFailure() {
         // Arrange
         String email = "test@example.com";
         String password = "wrongpassword";
@@ -74,7 +74,7 @@ class UserTests {
     }
 
     @Test
-    public void testGetAllUsers() {
+    protected void testGetAllUsers() {
         // Arrange
         List<UserReg> users = new ArrayList<>();
         when(userRepo.getAllUsers()).thenReturn(users);
@@ -88,7 +88,7 @@ class UserTests {
     }
 
     @Test
-    public void testUpdateUser() {
+    protected void testUpdateUser() {
         // Arrange
         UserReg user = new UserReg();
         when(userRepo.updateUser(user)).thenReturn(true);
